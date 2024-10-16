@@ -35,12 +35,13 @@ This command will build the image using the Dockerfile, tagging it as todo-api.
 Once the image is built, you can run the container:
 
 ```bash
-docker run -d -p 8080:8080 todo-api
+docker run -d --rm -p 8080:8080 todo-api
 ```
 
 This command will:
 
 - Run the container in detached mode (`-d`)
+- Remove the container after it shuts down (`--rm`)
 - Map port 8080 on the host to port 8080 in the container (`-p 8080:8080`)
 
 ### 4. Check the health of the API
